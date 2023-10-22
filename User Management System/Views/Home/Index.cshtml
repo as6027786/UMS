@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p style="color:white">Welcome, @User.Identity.Name</p>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <button type="submit" class="btn btn-link nav-link">Logout</button>
+    </form>
+}
+
+<div class="text-center">
+    <h1 style="color:white" class="display-4">Welcome</h1>
+    <p style="color:white">Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
